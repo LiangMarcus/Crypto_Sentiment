@@ -1,0 +1,18 @@
+{% extends  'partials/base.html' %}
+{% block title %}Search Results{% endblock %}
+
+{% block content%}
+<h2>Search Result of {{search_term}}</h2>
+<ul>
+<h2> {{ name }} </h2>
+<div class="row" align='justify'>
+    <div class="col-sm-9" align='left'>
+        {{ description }} The current price is <strong> USD {{ current_price }}. </strong>
+    </div>
+    <div class="col-sm-3" align='left'>
+        {{ gauge | safe }}
+    </div>
+    {{ candlestick | safe }}
+</div>
+</ul>
+{% endblock %}
